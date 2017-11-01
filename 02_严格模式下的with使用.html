@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    'use strict'
+    // 针对 var person 做简化操作
+    var person={name:'jack',age:18}
+
+    // 修改name，age
+    // person.name
+    // person.age
+    with (person){//报错：Uncaught SyntaxError: Strict mode code may not include a with statement
+        // 都是针对person对象的操作，省略person.
+        name='rose';
+        age=20;
+        console.log(name);
+    }
+    console.log(person);
+</script>
+</html>

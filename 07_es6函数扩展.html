@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    //    ==============字符串函数扩展=================
+    // 判断是否包含
+    //    let str = 'helloworld';
+    //    console.log(str.indexOf('eor') != -1);
+    //    console.log(str.includes('eor'));
+    //    console.log(str.indexOf('hello') != -1);
+    //    console.log(str.includes('hello'));
+
+    // 判断是否以参数开头
+    //    console.log(str.startsWith('ello'));
+    //    console.log(str.startsWith('hello'));
+
+    // 判断是否以参数结尾
+    //    console.log(str.endsWith('worl'));
+    //    console.log(str.endsWith('world'));
+
+    // 返回参数倍的自身
+    //    let love = '我爱你!';
+    //    console.log(love.repeat(500));
+
+    //    ==============数学函数扩展================
+    //    let PI = 3.1415926;
+    //    console.log(Math.trunc(PI));//3
+
+    //    ============操作数组函数扩展==============
+    let arr = [{name: '王昭君'}, {name: '后羿'}, {name: '李白'}];
+
+    //    let hero=arr.find(function (ele,index,arr) {
+    //        console.log(ele);
+    //        console.log(index);
+    //        console.log(arr);
+    //        console.log('===========');
+    //
+    //        //结束遍历，并且返回当前元素
+    //        return ele.name=='后羿';
+    //    })
+    //    console.log(hero);
+    //    let index=arr.findIndex(function (ele,index,arr) {
+    //        //结束遍历，并且返回当前索引
+    //        return ele.name=='李白'
+    //    })
+    //    console.log(index);
+
+    //    注意事项，如果找的是元素或者索引
+    //       find 没有找到的情况，undefined
+    console.log(arr.find(function (ele) {
+        return ele === '哈哈'
+    }));
+    //       findIndex 没有找到的情况，-1
+    console.log(arr.findIndex(function (ele) {
+        return ele === '哈哈'
+    }));
+</script>
+</html>

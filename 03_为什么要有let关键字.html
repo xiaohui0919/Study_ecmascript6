@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--你点击什么就提示什么数字-->
+<ul>
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+<script>
+    var lis = document.querySelectorAll('li');
+    // 循环添加事件
+    //    for (var i=0;lis.length;i++){
+    //        lis[i].onclick=function () {
+    //            alert(i);
+    //        }
+    //    }
+    // var  声明的对象会自动提升为全局变量
+
+    //函数的作用域中声明的变量，都是独立的
+    //        for (var i=0;lis.length;i++){
+    //            //函数的自执行
+    //            (function (index) {
+    //                // 分别有6个函数被执行，且内部都有index分别是0,1,2,3,4,5
+    //                // index是函数的作用域，都是独立的
+    //                lis[index].onclick=function () {
+    //                    alert(index);
+    //                }
+    //            })(i)
+    //
+    //        }
+
+    // 也可以使用对象的属性来存储该值
+    //    for(var i=0;lis.length;i++){
+    //        // 给li元素对象挂载属性，存储当前i的值
+    //        lis[i].index=i;
+    //        lis[i].onclick=function () {
+    //            // alert不能是i，而是当前元素对象的index属性
+    //            alert(this.index)
+    //        }
+    //    }
+
+    // 使用let关键字
+    for (let i = 0; lis.length; i++) {
+        lis[i].onclick = function () {
+            alert(i);
+        }
+    }
+</script>
+</html>

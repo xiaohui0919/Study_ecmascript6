@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'ues strict';
+    var num2=3;
+
+    if (true){
+        var num2=4
+    }
+    console.log(num2);//4
+
+    let num=1;
+
+    if(true){ // 块级作用域 {}
+       let num=2;
+        console.log(num);//2
+    }
+
+    console.log(num);//1
+
+    // 用let声明的变量，会在当前的作用域内查找声明，如果有，就用当前的。如果没有，就向上级查找
+    // 禁止在同一个块级作用域声明同名变量
+    // let num=5 // 第二次声明的时候会报错
+</script>
+</html>

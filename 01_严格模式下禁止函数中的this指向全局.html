@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //"use strict"
+    function test() {
+        //在函数中开启，作用就只限制该函数体内的代码
+        "use strict"
+        //this指向谁
+        console.log(this);//window  , 开启严格模式后是undefined
+    }
+    test()
+</script>
+</html>

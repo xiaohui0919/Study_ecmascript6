@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--根据字符串数据原样输出-->
+<pre>
+
+</pre>
+</body>
+<script>
+    'use strict';
+    //    let str=`/*
+    //*
+    //*          ┌─┐       ┌─┐
+    //*       ┌──┘ ┴───────┘ ┴──┐
+    //*       │                 │
+    //*       │       ───       │
+    //*       │  ─┬┘       └┬─  │
+    //*       │                 │
+    //*       │       ─┴─       │
+    //*       │                 │
+    //*       └───┐         ┌───┘
+    //*           │         │
+    //*           │         │
+    //*           │         │
+    //*           │         └──────────────┐
+    //*           │                        │
+    //*           │                        ├─┐
+    //*           │                        ┌─┘
+    //*           │                        │
+    //*           └─┐  ┐  ┌───────┬──┐  ┌──┘
+    //*             │ ─┤ ─┤       │ ─┤ ─┤
+    //*             └──┴──┘       └──┴──┘
+    //*                 神兽保佑
+    //*                 代码无BUG!
+    //*/`;
+
+    //    获取pre元素
+    let pre = document.querySelector('pre');
+    // ajax获取来的对象
+    let data = [{name: 'jack', age: 18}];
+    //    str='<ul>';
+    // str+='<li></li>'
+    // str+='<li></li>'
+    // str+='</ul>';
+    let str = `
+            <ul>
+            <li>${data[0].name}</li>
+            <li>${data[0].age}</li>
+            </ul>
+        `;
+    //    pre.innerText=str;
+    pre.innerHTML = str;
+</script>
+</html>
