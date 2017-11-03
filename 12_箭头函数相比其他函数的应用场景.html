@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+11
+</body>
+<script>
+   let obj={
+       name:'jack',
+       init:function () {
+           document.body.onclick=function () {
+               alert(this)// body对象
+           }
+       },
+       init2(){
+           document.body.onclick=()=>alert(this)
+       }
+   }
+
+//   obj.init()
+   obj.init2()
+</script>
+</html>

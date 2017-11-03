@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict'
+    // 没有参数
+    //    let fn1 = function () {
+    //        return 1
+    //    }
+
+    //    let fn2=()=>{
+    //        return 2
+    //    }
+    // 一行代码可以省略大括号，这一行代码就是返回值
+    //    let fn2=()=> 2;
+
+
+    // 多个参数
+    //    let fn1=function (n1,n2) {
+    //        return n1+n2
+    //    }
+    //    let fn2=(n1,n2)=> n1+n2
+    // 一行代码+ 1个参数
+    //    let fn1 = function (n1) {
+    //        return n1
+    //    }
+    //    let fn2=(n1)=> n1
+    //    let fn2= n1=> n1
+    // 多行代码
+    let fn1 = function (n1, n2) {
+        console.log('fn1');
+        return n1 + n2
+    }
+
+    let fn2 = (n1, n2) => {
+        console.log('fn2');
+        return n1 + n2
+    }
+
+    console.log(fn1(1, 2));
+    console.log(fn2(2, 3));
+</script>
+</html>

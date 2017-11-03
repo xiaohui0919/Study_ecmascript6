@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+111
+</body>
+<script>
+//    ES6以前的
+//    let obj={
+//        name:'jack',
+//        //函数为了给body挂载事件
+//        init:function () {
+//            console.log(this);// 这里的this是obj
+//            // 保存改对象的引用
+//            let self=this;
+//            document.body.onclick=function () {
+//                // 这个this绑定的是运行时的对象
+//                // 运行时通过点击body触发，所有就是body对象
+//                //alert(this);// this希望是obj
+//                alert(self.name)
+//            }
+//        }
+//    }
+//    obj.init()
+
+    // 这里的this是Window，所以最终找到了他function（window）{}
+    //ES6箭头函数的处理
+    let obj={//这里不是函数
+        name:'jack',
+        //函数为了给body挂载事件
+        init:()=> {
+            console.log(this);// 这里的this是obj
+            document.body.onclick=()=> {
+                //箭头函数本身没有this，但是会根据上级的function去绑定当前的this
+                //alert(this.name)
+                alert(this)
+            }
+        }
+    }
+    obj.init()
+
+</script>
+</html>

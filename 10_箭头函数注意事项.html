@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //    let Person=(obj)=>{
+    //        this.name=obj.name
+    //    }
+    //    // 报错：Person is not a constructor
+    //    let p=new Person({name:'小明'})
+
+    //    箭头函数中的arguments
+    //    let fn1=function (n1,n2) {
+    //        console.log(arguments);
+    //    }
+    //    fn1(1,2)
+    //    let fn2 = (n1, n2) => console.log(arguments)
+    //arguments is not defined
+    //    fn2(3, 4)
+
+//    如果一定要在箭头函数中获取arguments
+    let fn1 =function (n1,n2) {
+        // console.log(arguments);
+        let fn2=(n3,n4)=>console.log(arguments)
+        // 调用上面的函数
+        fn2(8,9)
+    }
+    fn1(4,5)
+
+
+</script>
+</html>

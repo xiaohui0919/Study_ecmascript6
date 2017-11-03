@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict'
+    let person={
+        fn1:function () {
+            console.log(this);
+        },
+        fn2(){
+            console.log(this);
+        },
+        fn3:()=>console.log(this)
+    }
+    person.fn1()
+    person.fn2()
+    person.fn3()
+</script>
+</html>
