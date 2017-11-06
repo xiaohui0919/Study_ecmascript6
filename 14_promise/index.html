@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getMsg(url) {
+       // 将当前的异步行为包含在promise中，
+       // 有成功，有失败，记录一个你的承诺，好控制流程
+       let p = new Promise(function (resolve,reject) {
+           // 异步行为
+           let xhr=new XMLHttpRequest()
+           // 打开连接
+           xhr.open('get',url)
+           // 发送
+           xhr.send()
+           // 设置连接
+           xhr.onreadystatechange=function () {
+               if(xhr.status==200&&xhr.readyState==4){
+                   alert(xhr.responseText)
+                   //成功
+                   resolve()
+               }
+           }
+       })
+
+        return p
+    }
+    // 简洁版的操作
+    getMsg('./1.json')//获取promise对象，并且可执行.then，对应resolve
+        .then(function () {
+            return getMsg('./2.json')
+        })//then是之前promise对象成功以后的操作
+        .then(function () {
+            return getMsg('./3.json')
+        })
+        .then(function () {
+            return getMsg('./1.json')
+        })
+        .then(function () {
+            return getMsg('./2.json')
+        })
+        .then(function () {
+            return getMsg('./3.json')
+        })
+
+</script>
+</html>

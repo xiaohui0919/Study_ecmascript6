@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getMsg(url,callback) {
+        let xhr=new XMLHttpRequest()
+        // 打开连接
+        xhr.open('get',url)
+        // 发送
+        xhr.send()
+        // 设置连接
+        xhr.onreadystatechange=function () {
+            if(xhr.status==200&&xhr.readyState==4){
+                alert(xhr.responseText)
+                //下一步行为的代码处
+                callback()
+            }
+        }
+    }
+    // 回调函数地狱
+    getMsg('./1.json',function () {
+        getMsg('./2.json',function () {
+            getMsg('./3.json',function () {
+                getMsg('./1.json',function () {
+                    getMsg('./2.json',function () {
+                        getMsg('./3.json',function () {
+                            getMsg('./1.json',function () {
+                                getMsg('./2.json',function () {
+                                    getMsg('./3.json',function () {
+
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    })
+
+</script>
+</html>
