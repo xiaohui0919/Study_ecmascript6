@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict'
+    let person={name:'jack'}
+    let tmp='';//需要第三方变量的储存
+    // 给其对象添加监视属性 setter||getter
+    Object.defineProperty(person,'name',{
+        set:function (value) {
+            console.log('set被触发了');//设置赋值的行为
+            // 设置赋值之后的数据改变
+            tmp=value;
+            // person.name=value; 死循环
+        },
+        get:function () {
+            console.log('get被触发了');//设置获取的行为
+            return tmp;
+            // return person.name 报错：栈溢出
+        }
+    })
+</script>
+</html>
